@@ -9,7 +9,20 @@ class EmailParser
     @email_addresses = email_addresses
   end
 
+  def email_list
+    @email_addresses
+  end
+
+  def email_list=(emails)
+    @email_addresses = emails
+  end
+
+  # def remove_duplicates(group_of_emails=[])
+  #   group_of_emails.
+  # end
+
   def parse
+    email_list.split(/, | |,/).uniq!.join(" ")
   end
 
 end
