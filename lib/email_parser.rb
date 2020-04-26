@@ -23,7 +23,7 @@ class EmailAddressParser
   # end
 
   def parse
-    @email_addresses.split(/, | |,/).uniq!.join(" ")
+    @email_addresses.split(/, | |,/).uniq!
     # binding.pry
   end
 
